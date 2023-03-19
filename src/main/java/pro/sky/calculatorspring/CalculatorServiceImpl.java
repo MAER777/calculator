@@ -8,15 +8,15 @@ public class CalculatorServiceImpl implements CalculatorService{
         return "Добро пожаловать в калькулятор.";
     }
 
-    public String plusCalculator(double number1, double number2) {
+    public String plusCalculator(Double number1, Double number2) {
         return String.valueOf(number1+number2);
     }
 
-    public String minusCalculator(double number1, double number2) {
+    public String minusCalculator(Double number1, Double number2) {
         return String.valueOf(number1-number2);
     }
 
-    public String  multiplyCalculator(double number1, double number2) {
+    public String  multiplyCalculator(Double number1, Double number2) {
         return String.valueOf(number1*number2);
     }
 
