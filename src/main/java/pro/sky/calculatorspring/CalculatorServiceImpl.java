@@ -8,19 +8,19 @@ public class CalculatorServiceImpl implements CalculatorService{
         return "Добро пожаловать в калькулятор.";
     }
 
-    public double plusCalculator(double number1, double number2) {
-        return (number1+number2);
+    public String plusCalculator(double number1, double number2) {
+        return String.valueOf(number1+number2);
     }
 
-    public double minusCalculator(double number1, double number2) {
-        return (number1-number2);
+    public String minusCalculator(double number1, double number2) {
+        return String.valueOf(number1-number2);
     }
 
-    public double multiplyCalculator(double number1, double number2) {
-        return (number1*number2);
+    public String  multiplyCalculator(double number1, double number2) {
+        return String.valueOf(number1*number2);
     }
 
-    public double divideCalculator(double number1, double number2) {
-        return (number1/number2);
+    public String divideCalculator(Double number1, Double number2) {
+        return String.valueOf(String.format("%.3f",number1/number2));
     }
 }
