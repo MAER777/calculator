@@ -28,21 +28,21 @@ public class Controller {
     }
 
     @GetMapping(path = "/calculator/plus")
-    public String plusCalculator(@RequestParam("num1") double number1, @RequestParam("num2") double number2) {
-        return helloService.plusCalculator(number1, number2);
+    public String plusCalculator(@RequestParam (value = "num1", required = false) double number1, @RequestParam(value = "num2", required = false) double number2) {
+        return number1 + " + " + number2 + " = " + helloService.plusCalculator(number1, number2);
     }
     @GetMapping(path = "/calculator/minus")
-    public String minusCalculator(@RequestParam("num1") double number1, @RequestParam("num2") double number2) {
-        return helloService.minusCalculator(number1, number2);
+    public String minusCalculator(@RequestParam(value = "num1", required = false) double number1, @RequestParam(value = "num2", required = false) double number2) {
+        return number1 + " - " + number2 + " = " + helloService.minusCalculator(number1, number2);
     }
 
     @GetMapping(path = "/calculator/multiply")
-    public String multiplyCalculator(@RequestParam("num1") double number1, @RequestParam("num2") double number2) {
-        return helloService.multiplyCalculator(number1, number2);
+    public String multiplyCalculator(@RequestParam(value = "num1", required = false) double number1, @RequestParam(value = "num2", required = false) double number2) {
+        return number1 + " * " + number2 + " = " + helloService.multiplyCalculator(number1, number2);
     }
 
     @GetMapping(path = "/calculator/divide")
-    public String divideCalculator(@RequestParam("num1") double number1, @RequestParam("num2") double number2) {
-        return helloService.divideCalculator(number1, number2);
+    public String divideCalculator(@RequestParam(value = "num1", required = false) Integer number1, @RequestParam(value = "num2", required = false) Integer number2) {
+        return number1 + " / " + number2 + " = " + helloService.divideCalculator(number1, number2);
     }
 }

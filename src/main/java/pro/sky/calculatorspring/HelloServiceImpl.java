@@ -16,23 +16,27 @@ public class HelloServiceImpl implements HelloService {
         return "Добро пожаловать в калькулятор.";
     }
 
-    public String plusCalculator(double number1, double number2) {
-        return number1 + " + " + number2 + " = " + (number1+number2);
+    public double plusCalculator(double number1, double number2) {
+        return (number1+number2);
     }
 
-    public String minusCalculator(double number1, double number2) {
-        return number1 + " - " + number2 + " = " + (number1-number2);
+    public double minusCalculator(double number1, double number2) {
+        return (number1-number2);
     }
 
-    public String multiplyCalculator(double number1, double number2) {
-        return number1 + " * " + number2 + " = " + (number1*number2);
+    public double multiplyCalculator(double number1, double number2) {
+        return (number1*number2);
     }
 
-    public String divideCalculator(double number1, double number2) {
-        if (number2 == 0) {
+    public String divideCalculator(Integer number1, Integer number2) {
+        if (number1 == null) {
+            return "Введите первое число";
+        } else if (number2 == null) {
+            return "Введите второе число";
+        } else if (number2 == 0) {
             return "Деление на НОЛЬ не возможно.";
         } else{
-            return number1 + " / " + number2 + " = " + (number1/number2);
+            return String.valueOf(number1/number2);
         }
     }
 }

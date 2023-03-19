@@ -5,8 +5,8 @@ public interface HelloService {
     String answerHello(String userName);
 
     String helloCalculator();
-    String plusCalculator(double number1, double number2);
-    String minusCalculator(double number1, double number2);
-    String multiplyCalculator(double number1, double number2);
-    String divideCalculator(double number1, double number2);
+    double plusCalculator(double number1, double number2);
+    double minusCalculator(double number1, double number2);
+    double multiplyCalculator(double number1, double number2);
+    String divideCalculator(Integer number1, Integer number2);
 }
